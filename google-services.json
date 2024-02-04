@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "209642338204",
+    "project_id": "tour-bucks",
+    "storage_bucket": "tour-bucks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209642338204:android:b68b38a10d42aaa937fa59",
+        "android_client_info": {
+          "package_name": "com.tanmayvaij.TourBucks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209642338204-6eut9v94kt3naat657nnfcapeme606ku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tanmayvaij.TourBucks",
+            "certificate_hash": "769d7711d37924b0e2839a6f531262afd7df6984"
+          }
+        },
+        {
+          "client_id": "209642338204-j39fvqnmp6dfh55jfgulq4l3tip005m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQkOaDH60XD2yIf9-z3KycOXsYciLSGJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209642338204-j39fvqnmp6dfh55jfgulq4l3tip005m5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
