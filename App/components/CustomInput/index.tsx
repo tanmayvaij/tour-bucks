@@ -1,14 +1,39 @@
-import { View, Text, TextInput, StyleSheet } from "react-native";
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  NativeSyntheticEvent,
+  TextInputFocusEventData,
+  Text,
+} from "react-native";
 import React from "react";
+import { fontFamily } from "../../theme";
 
 interface CustomInputProps {
-  placeholder: string;
+  error?: string;
+  placeholder?: string;
+  value?: string;
+  onChangeText?: (text: string) => void;
+  onBlur?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
 }
 
-const CustomInput: React.FC<CustomInputProps> = ({ placeholder }) => {
+const CustomInput: React.FC<CustomInputProps> = ({
+  placeholder,
+  value,
+  onChangeText,
+  onBlur,
+  error,
+}) => {
   return (
     <View style={styles.inputContainer}>
-      <TextInput style={styles.input} placeholder={placeholder} />
+      <TextInput
+        onBlur={onBlur}
+        onChangeText={onChangeText}
+        value={value}
+        style={styles.input}
+        placeholder={placeholder}
+      />
+      <Text>{error}</Text>
     </View>
   );
 };
@@ -16,14 +41,14 @@ const CustomInput: React.FC<CustomInputProps> = ({ placeholder }) => {
 const styles = StyleSheet.create({
   inputContainer: {
     marginHorizontal: 10,
-    marginVertical: 5
+    marginVertical: 5,
   },
   input: {
     backgroundColor: "white",
     paddingHorizontal: 24,
     paddingVertical: 10,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 12
+    fontFamily: fontFamily.regular,
+    borderRadius: 12,
   },
 });
 

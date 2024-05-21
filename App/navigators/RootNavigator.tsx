@@ -5,8 +5,9 @@ import OnboardingScreen from "../screens/OnBoardingScreen";
 import auth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
 import HomeScreen from "../screens/HomeScreen";
 import AddTripScreen from "../screens/AddTripScreen";
+import { RootStackParamList } from "../types/navigation";
 
-const NativeStack = createNativeStackNavigator();
+const NativeStack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>();
